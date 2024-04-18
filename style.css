@@ -1,8 +1,20 @@
-.bg-color-skyBlue {
-    background-color: #e3f2fd !important;
+.bg-color-nav {
+    background-color: #88BDBC !important;
 }
 
 .nav-logo {
-    width: 30px;
-    height: 30px;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.carousel-height {
+    height: 30rem !important;
+}
+
+.carousel-color {
+    background-color: #254E58 !important;
+}
+
+.h-100 {
+    height: 100% !important;
 }
