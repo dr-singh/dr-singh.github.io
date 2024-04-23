@@ -1,3 +1,22 @@
-No Surgery:15
-No Side Effects:10
-Migraine:5
+Migraine:20
+Otorrhoea:15
+Tinnitus:10
+Vertigo:36
+Earache:25
+Hearing Loss:15
+Red Eyes:37
+Conjunctivitis:35
+Lacrymation: 32
+Error of Refraction: 33
+Rhinitis: 39
+Nasal Polyp: 40
+Epistaxis: 27
+Recurrent Cold-Coryza: 18
+Loss of Smell: 15
+Mouth Ulcers: 17
+Loss of Taste: 23
+Stammering: 34
+Profuse Salivation: 16
+Acne/Pimples: 24
+Dark Circles: 26
+Spots on Face: 28
