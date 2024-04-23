@@ -13,7 +13,8 @@ html, body {
 }
 
 .carousel-height {
-    height: 35vw !important;
+    height: 60vw !important;
+    max-height: 60vh !important;
 }
 
 .profile-height {
