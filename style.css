@@ -13,6 +13,10 @@ html, body {
 }
 
 .carousel-height {
+    height: 35vw !important;
+}
+
+.profile-height {
     height: 30rem !important;
 }
 
@@ -85,4 +89,5 @@ https://codepen.io/zitrusfrisch/pen/DbwjOR
 
 .homo-text {
     backdrop-filter: blur(1px);
+    font-size: 2.6vw !important;
 }
