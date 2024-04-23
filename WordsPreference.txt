@@ -1,0 +1,3 @@
+No Surgery:15
+No Side Effects:10
+Migraine:5
