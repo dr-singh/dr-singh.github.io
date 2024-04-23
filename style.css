@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .bg-color-nav {
     background-color: #88BDBC !important;
 }
@@ -29,4 +34,55 @@
   font-family: "Sedan", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+#welcomeText {
+    font-size: 7vw !important;
+    font-weight: bold;
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/*
+https://codepen.io/cesar2535/pen/ByYXpN
+https://codepen.io/zitrusfrisch/pen/DbwjOR
+*/
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+#welcomeText2 {
+    font-size: 7vw !important;
+    font-weight: bold;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+    background: url(animated-text-fill.png) repeat-y;
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+}
+
+/*
+.bkgnd-img1 {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+*/
+
+.bkgnd-img2 {
+    background-image: url('background2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.homo-text {
+    backdrop-filter: blur(5px);
 }
