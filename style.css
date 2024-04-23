@@ -13,7 +13,7 @@ html, body {
 }
 
 .carousel-height {
-    height: 60vw !important;
+    height: 70vw !important;
     max-height: 60vh !important;
 }
 
@@ -90,5 +90,5 @@ https://codepen.io/zitrusfrisch/pen/DbwjOR
 
 .homo-text {
     backdrop-filter: blur(1px);
-    font-size: 2.6vw !important;
+    font-size: calc(2.1vw + 1.0vh) !important;
 }
