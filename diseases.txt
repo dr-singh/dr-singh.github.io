@@ -1,0 +1,10 @@
+Category1:Disease1:Description1
+Category2:Disease2:Description2
+Category3:Disease3:Description3
+Category4:Disease4:Description4
+Category5:Disease5:Description5
+Category6:Disease6:Description6
+Category7:Disease7:Description7
+Category8:Disease8:Description8
+Category9:Disease9:Description9
+Category10:Disease10:Description10

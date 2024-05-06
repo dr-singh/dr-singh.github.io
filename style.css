@@ -29,6 +29,10 @@ html, body {
     height: 100% !important;
 }
 
+.w-max-content {
+    width: max-content !important;
+}
+
 .sedan-regular {
   font-family: "Sedan", serif;
   font-weight: 400;
@@ -91,4 +95,8 @@ https://codepen.io/zitrusfrisch/pen/DbwjOR
 .homo-text {
     backdrop-filter: blur(1px);
     font-size: calc(2.1vw + 1.0vh) !important;
+}
+
+.accordion-border {
+    --bs-accordion-border-width: 0 !important;
 }
