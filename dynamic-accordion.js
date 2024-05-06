@@ -4,18 +4,21 @@ let dataMap = new Map();
 const ELEMENT_BUTTON = "button";
 const ELEMENT_DIV = "div";
 const ELEMENT_H2 = "h2";
+const ELEMENT_SPAN = "span";
 
 const VAL_BUTTON = "button";
 const VAL_COLLAPSE = "collapse";
 const VAL_FALSE = "false";
 const VAL_ACC = "accordion";
-const VAL_CLASS_ACC_PARENT_BTN = "btn btn-primary collapsed m-2";
-const VAL_CLASS_ACC_CHILD_BTN = "accordion-button";
+const VAL_BADGE = "badge";
+const VAL_CLASS_ACC_PARENT_BTN = "btn btn-primary collapsed position-relative m-2";
+const VAL_CLASS_ACC_CHILD_BTN = "accordion-button btn btn-secondary";
 const VAL_CLASS_ACC_DIV = "accordion-collapse collapse";
 const VAL_CLASS_ACC_ITEM = "accordion-item";
 const VAL_CLASS_ACC_BODY = "accordion-body";
 const VAL_CLASS_ACC_HEADER = "accordion-header";
 const VAL_CLASS_ACC = "accordion";
+const VAL_CLASS_BADGE = "position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-success";
 const VAL_CHILD = "Child";
 
 const ATTRIBUTE_ID = "id";
@@ -32,21 +35,29 @@ const ID_ACCORDION_PARENT = "accordion-parent";
 
 getLinesArrayFromTxtFile(DATA_TXT_FILE)
     .then(dataLines => {
-        if (dataLines) dataLines.forEach(buildAccordion);
+        if (dataLines) {
+            dataLines.forEach(buildAccordion);
+            dataMap.forEach((value, key) => document.getElementById(getBadgeId(key)).innerText = value.val);
+        }
     });
 
 function buildAccordion(dataInput) {
     data = dataInput.split(COLON);
+    lenData = data.length;
 
-    if (dataMap.has(data[0])) {
-        dataMap.get(data[0]).val++;
+    if (lenData > 0) categoryName = data[0]; else categoryName = null;
+    if (lenData > 1) diseaseName = data[1]; else diseaseName = null;
+    if (lenData > 2) diseaseDesc = data[2]; else diseaseDesc = null;
+
+    if (dataMap.has(categoryName)) {
+        dataMap.get(categoryName).val++;
     } else {
-        dataMap.set(data[0], 1);
-        document.getElementById(ID_ACCORDION_BUTTONS).appendChild(getAccordionButton(data[0], null));
-        document.getElementById(ID_ACCORDION_PARENT).appendChild(getAccordionItem(data[0], null, null));
+        dataMap.set(categoryName, {val: 1});
+        document.getElementById(ID_ACCORDION_BUTTONS).appendChild(getAccordionButton(categoryName, null));
+        document.getElementById(ID_ACCORDION_PARENT).appendChild(getAccordionItem(categoryName, null, null));
     }
 
-   document.getElementById(getAccordionId(data[0], data[1])).appendChild(getAccordionItem(data[0], data[1], data[2]));
+   document.getElementById(getAccordionId(categoryName, diseaseName)).appendChild(getAccordionItem(categoryName, diseaseName, diseaseDesc));
 }
 
 function getAccordionItem(parentText, childText, childTextDesc) {
@@ -80,8 +91,14 @@ function getAccordionButton(parentText, childText) {
     val.setAttribute(ATTRIBUTE_ARIA_CONTROLS, getAccordionCollapseId(parentText, childText));
     val.setAttribute(ATTRIBUTE_ARIA_EXPANDED, VAL_FALSE);
     val.setAttribute(ATTRIBUTE_CLASS, getAccordionBtnClass(parentText, childText));
-    if (childText) val.innerText = childText;
-    else val.innerText = parentText;
+
+    if (childText) {
+        val.innerText = childText;
+    } else {
+        val.innerText = parentText;
+        val.appendChild(getBadge(parentText));
+    }
+
     return val;
 }
 
@@ -116,7 +133,18 @@ function getAccordionId(parentText, childText) {
     else return ID_ACCORDION_PARENT;
 }
 
+function getBadgeId(parentText) {
+    return VAL_BADGE + parentText;
+}
+
 function getAccordionBtnClass(parentText, childText) {
     if (childText) return VAL_CLASS_ACC_CHILD_BTN;
     else return VAL_CLASS_ACC_PARENT_BTN;
+}
+
+function getBadge(parentText) {
+    let val = document.createElement(ELEMENT_SPAN);
+    val.setAttribute(ATTRIBUTE_CLASS, VAL_CLASS_BADGE);
+    val.setAttribute(ATTRIBUTE_ID, getBadgeId(parentText));
+    return val;
 }
