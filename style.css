@@ -84,13 +84,13 @@ https://codepen.io/zitrusfrisch/pen/DbwjOR
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-*/
 
 .bkgnd-img2 {
     background-image: url('background2.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+*/
 
 .homo-text {
     backdrop-filter: blur(1px);
