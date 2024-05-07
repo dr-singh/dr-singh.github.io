@@ -1,5 +1,9 @@
+let toastIds = ["welcomeToast", "googleTranslateToast"];
+
 window.onload = (event) => {
-  let toastLive = document.getElementById("welcomeToast");
-  let toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLive);
-  toastBootstrap.show();
+  toastIds.forEach(toastId => {
+      let toast = document.getElementById(toastId);
+      let toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast);
+      toastBootstrap.show();
+  })
 }
