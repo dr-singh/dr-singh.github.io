@@ -100,3 +100,8 @@ https://codepen.io/zitrusfrisch/pen/DbwjOR
 .accordion-border {
     --bs-accordion-border-width: 0 !important;
 }
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
