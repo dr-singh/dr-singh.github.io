@@ -45,9 +45,9 @@ function buildAccordion(dataInput) {
     data = dataInput.split(COLON);
     lenData = data.length;
 
-    if (lenData > 0) categoryName = data[0]; else categoryName = null;
-    if (lenData > 1) diseaseName = data[1]; else diseaseName = null;
-    if (lenData > 2) diseaseDesc = data[2]; else diseaseDesc = null;
+    if (lenData > 0) categoryName = data[0].trim(); else categoryName = null;
+    if (lenData > 1) diseaseName = data[1].trim(); else diseaseName = null;
+    if (lenData > 2) diseaseDesc = data[2].trim(); else diseaseDesc = null;
 
     if (dataMap.has(categoryName)) {
         dataMap.get(categoryName).val++;
@@ -118,23 +118,23 @@ function getAccordionItemDiv() {
 function getAccordionBody(parentText, childText, childTextDesc) {
     let val = document.createElement(ELEMENT_DIV);
     val.setAttribute(ATTRIBUTE_CLASS, VAL_CLASS_ACC_BODY);
-    if (childText) val.innerText = childTextDesc;
+    if (childText) val.innerHTML = childTextDesc;
     else val.appendChild(getAccordionParentDiv(parentText));
     return val;
 }
 
 function getAccordionCollapseId(parentText, childText) {
-    if (childText) return VAL_COLLAPSE + parentText + childText;
-    else return VAL_COLLAPSE + parentText;
+    if (childText) return getSingleWord(VAL_COLLAPSE + parentText + childText);
+    else return getSingleWord(VAL_COLLAPSE + parentText);
 }
 
 function getAccordionId(parentText, childText) {
-    if (childText) return VAL_ACC + parentText + VAL_CHILD;
+    if (childText) return getSingleWord(VAL_ACC + parentText + VAL_CHILD);
     else return ID_ACCORDION_PARENT;
 }
 
 function getBadgeId(parentText) {
-    return VAL_BADGE + parentText;
+    return getSingleWord(VAL_BADGE + parentText);
 }
 
 function getAccordionBtnClass(parentText, childText) {
@@ -147,4 +147,8 @@ function getBadge(parentText) {
     val.setAttribute(ATTRIBUTE_CLASS, VAL_CLASS_BADGE);
     val.setAttribute(ATTRIBUTE_ID, getBadgeId(parentText));
     return val;
+}
+
+function getSingleWord(text) {
+    return text.replaceAll(SPACE, HYPHEN);
 }
