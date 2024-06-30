@@ -6,6 +6,10 @@ const ELEMENT_DIV = "div";
 const ELEMENT_H2 = "h2";
 const ELEMENT_SPAN = "span";
 
+const ELEMENT_UNORDERED_LIST_START = "<ul><li>"
+const ELEMENT_UNORDERED_LIST_CHANGE = DOT + "</li><li>"
+const ELEMENT_UNORDERED_LIST_END = "</li></ul>"
+
 const VAL_BUTTON = "button";
 const VAL_COLLAPSE = "collapse";
 const VAL_FALSE = "false";
@@ -118,7 +122,7 @@ function getAccordionItemDiv() {
 function getAccordionBody(parentText, childText, childTextDesc) {
     let val = document.createElement(ELEMENT_DIV);
     val.setAttribute(ATTRIBUTE_CLASS, VAL_CLASS_ACC_BODY);
-    if (childText) val.innerHTML = childTextDesc;
+    if (childText) val.innerHTML = getAccordionDescription(childTextDesc);
     else val.appendChild(getAccordionParentDiv(parentText));
     return val;
 }
@@ -147,6 +151,10 @@ function getBadge(parentText) {
     val.setAttribute(ATTRIBUTE_CLASS, VAL_CLASS_BADGE);
     val.setAttribute(ATTRIBUTE_ID, getBadgeId(parentText));
     return val;
+}
+
+function getAccordionDescription(text) {
+    return ELEMENT_UNORDERED_LIST_START + text.replaceAll(DOT + SPACE, ELEMENT_UNORDERED_LIST_CHANGE) + ELEMENT_UNORDERED_LIST_END;
 }
 
 function getSingleWord(text) {

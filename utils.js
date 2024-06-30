@@ -4,6 +4,7 @@ const HYPHEN = "-";
 const COMMA = ",";
 const COLON = ":";
 const HASH = "#"
+const DOT = ".";
 
 function getLinesArrayFromTxtFile(txtFileName) {
     return new Promise(function(resolve, reject) {

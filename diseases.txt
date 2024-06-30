@@ -1,14 +1,14 @@
-Eye : Red Eye : Reddish or pinkish discolouration of sclera (white part or eye). <br/> It can be with or without pain.
-Eye : Blepharitis : Inflammation / Puffiness of the eyelids. <br/> Redness, heaviness of eyelids, difficult to open eyes.
-Eye : Conjunctivitis : Inflammation / infection of the conjuctiva. <br/> Redness of eyes, watery or thick discharges, photophobia (sensitive to light), night stickiness of eyelids.
-Eye : Error of refraction (Specs) : Myopia - Difficulty in seeing or reading from long distance. <br/> Hypermetropia - Difficulty in seeing or reading near objects. <br/> Presbyopia - Gradual loss of vision, blurriness in elderly people <40yrs.
-ENT - Ear : Hearing loss : Difficulty in hearing, requires loud voice to hear clearly.
-ENT - Ear : Tinnitus : Sounds heard in the ear (only pt can listen to it). <br/> Types of sounds - Ringing, buzzing, crackling, air gushing, beeping, etc.
-ENT - Ear : Otorrhoea : Fluid discharges from ear. <br/> Watery or thick pus oozing from ear, difficulty in hearing.
-ENT - Ear : Earache : Pain the ear of any type, sensitive to noise, etc.
-ENT - Ear : Vertigo : Spinning sensation or feeling of disbalance, blackouts. <br/> Vertigo has many causes but ear affection is one of the commonest reason for it.
-ENT - Nose : Rhinitis : Inflammation/irritation of the nasal mucosa. <br/> Itching of nose, sneezing, watery discharge from nose, redness of nose.
-ENT - Nose : Sinusitis : Inflammation of mucosa of sinuses. <br/> Congestion of nose, Yellowish-greenish discharge from nose, difficulty breathing through nose, headache on frontal side of forehead & above eyebrow.
-ENT - Nose : Epistaxis : Bleeding from nose. <br/> Difficulty in breathing, bright to dark coloured blood in nasal discharge.
-ENT - Nose : Recurrent Cold & Coryza : Continues & recurring infection of nose & throat on climatic change in children & some adults.
-ENT - Throat : Tonsillitis : Inflammation of the tonsils. <br/> Difficulty in eating or drinking, Severe pain in throat, Fever, Sensitiveness of throat.
+Eye : Red Eye : Reddish or pinkish discolouration of sclera (white part or eye). It can be with or without pain.
+Eye : Blepharitis : Inflammation / Puffiness of the eyelids. Redness, heaviness of eyelids, difficult to open eyes.
+Eye : Conjunctivitis : Inflammation / infection of the conjuctiva. Redness of eyes, watery or thick discharges, photophobia (sensitive to light), night stickiness of eyelids.
+Eye : Error of refraction (Specs) : Myopia - Difficulty in seeing or reading from long distance. Hypermetropia - Difficulty in seeing or reading near objects. Presbyopia - Gradual loss of vision, blurriness in elderly people <40yrs.
+Ear : Hearing loss : Difficulty in hearing, requires loud voice to hear clearly.
+Ear : Tinnitus : Sounds heard in the ear (only pt can listen to it). Types of sounds - Ringing, buzzing, crackling, air gushing, beeping, etc.
+Ear : Otorrhoea : Fluid discharges from ear. Watery or thick pus oozing from ear, difficulty in hearing.
+Ear : Earache : Pain the ear of any type, sensitive to noise, etc.
+Ear : Vertigo : Spinning sensation or feeling of disbalance, blackouts. Vertigo has many causes but ear affection is one of the commonest reason for it.
+Nose : Rhinitis : Inflammation/irritation of the nasal mucosa. Itching of nose, sneezing, watery discharge from nose, redness of nose.
+Nose : Sinusitis : Inflammation of mucosa of sinuses. Congestion of nose, Yellowish-greenish discharge from nose, difficulty breathing through nose, headache on frontal side of forehead & above eyebrow.
+Nose : Epistaxis : Bleeding from nose. Difficulty in breathing, bright to dark coloured blood in nasal discharge.
+Nose : Recurrent Cold & Coryza : Continues & recurring infection of nose & throat on climatic change in children & some adults.
+Throat : Tonsillitis : Inflammation of the tonsils. Difficulty in eating or drinking, Severe pain in throat, Fever, Sensitiveness of throat.
